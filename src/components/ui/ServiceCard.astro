@@ -11,6 +11,8 @@ interface Props {
     height?: number;
     loading?: 'lazy' | 'eager';
     fetchpriority?: 'high' | 'low' | 'auto';
+    borderColor?: string;
+    largeArrow?: boolean;
 }
 
 const { 
@@ -22,7 +24,9 @@ const {
     width = 450, 
     height = 450,
     loading = 'lazy',
-    fetchpriority = 'auto'
+    fetchpriority = 'auto',
+    borderColor = '#FDF5E9',
+    largeArrow = false
 } = Astro.props;
 const isBlog = variant === 'blog';
 
@@ -58,8 +62,8 @@ const isAsset = typeof image !== 'string';
             )}
         </a>
         
-        <a href={url} class="absolute -bottom-4 -right-4 bg-[#333638] text-white w-14 h-14 rounded-full flex items-center justify-center border-[6px] border-[#FDF5E9] transition-transform group-hover:scale-110 z-20">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+        <a href={url} class="absolute -bottom-4 -right-4 bg-[#333638] text-white w-14 h-14 rounded-full flex items-center justify-center border-[6px] transition-transform group-hover:scale-110 z-20" style={`border-color: ${borderColor};`}>
+            <svg xmlns="http://www.w3.org/2000/svg" width={largeArrow ? "32" : "20"} height={largeArrow ? "32" : "20"} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
         </a>
     </div>
     <div class="px-4">
