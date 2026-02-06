@@ -1235,7 +1235,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp.RZJh-E5G.js'
+      './sharp.ByE98NkR.js'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;
@@ -1739,75 +1739,220 @@ const $$ServiceCard = createComponent(($$result, $$props, $$slots) => {
     width = 450,
     height = 450,
     loading = "lazy",
-    fetchpriority = "auto"
+    fetchpriority = "auto",
+    borderColor = "#FDF5E9",
+    largeArrow = false
   } = Astro2.props;
   const isAsset = typeof image !== "string";
-  return renderTemplate`${maybeRenderHead()}<div class="swiper-slide group cursor-grab active:cursor-grabbing pb-12 text-center"> <div class="relative w-full h-80 md:h-64 mb-6"> <a${addAttribute(url, "href")} class="block w-full h-full rounded-[32px] overflow-hidden"> ${isAsset ? renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": image, "alt": title, "width": width, "height": height, "loading": loading, "fetchpriority": fetchpriority, "class": "w-full h-full object-cover rounded-[32px] shadow-md pointer-events-none select-none", "widths": [400, 600, 800], "quality": 70 })}` : renderTemplate`<img${addAttribute(image, "src")}${addAttribute(title, "alt")} class="w-full h-full object-cover rounded-[32px] shadow-md pointer-events-none select-none"${addAttribute(loading, "loading")}${addAttribute(fetchpriority, "fetchpriority")}${addAttribute(width, "width")}${addAttribute(height, "height")}>`} </a> <a${addAttribute(url, "href")} class="absolute -bottom-4 -right-4 bg-[#333638] text-white w-14 h-14 rounded-full flex items-center justify-center border-[6px] border-[#FDF5E9] transition-transform group-hover:scale-110 z-20"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg> </a> </div> <div class="px-4"> <h3 class="text-xl font-bold text-[#4EAC9F] mb-2" style="font-family: 'Poppins', sans-serif;"> <a${addAttribute(url, "href")} class="hover:text-[#333638] transition-colors duration-300"> ${title} </a> </h3> ${description && renderTemplate`<p class="text-[#333638] text-sm leading-relaxed" style="font-family: 'Poppins', sans-serif;">${description}</p>`} </div> </div>`;
+  return renderTemplate`${maybeRenderHead()}<div class="swiper-slide group cursor-grab active:cursor-grabbing pb-12 text-center"> <div class="relative w-full h-80 md:h-64 mb-6"> <a${addAttribute(url, "href")} class="block w-full h-full rounded-[32px] overflow-hidden"> ${isAsset ? renderTemplate`${renderComponent($$result, "Image", $$Image, { "src": image, "alt": title, "width": width, "height": height, "loading": loading, "fetchpriority": fetchpriority, "class": "w-full h-full object-cover rounded-[32px] shadow-md pointer-events-none select-none", "widths": [400, 600, 800], "quality": 70 })}` : renderTemplate`<img${addAttribute(image, "src")}${addAttribute(title, "alt")} class="w-full h-full object-cover rounded-[32px] shadow-md pointer-events-none select-none"${addAttribute(loading, "loading")}${addAttribute(fetchpriority, "fetchpriority")}${addAttribute(width, "width")}${addAttribute(height, "height")}>`} </a> <a${addAttribute(url, "href")} class="absolute -bottom-4 -right-4 bg-[#333638] text-white w-14 h-14 rounded-full flex items-center justify-center border-[6px] transition-transform group-hover:scale-110 z-20"${addAttribute(`border-color: ${borderColor};`, "style")}> <svg xmlns="http://www.w3.org/2000/svg"${addAttribute(largeArrow ? "32" : "20", "width")}${addAttribute(largeArrow ? "32" : "20", "height")} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg> </a> </div> <div class="px-4"> <h3 class="text-xl font-bold text-[#4EAC9F] mb-2" style="font-family: 'Poppins', sans-serif;"> <a${addAttribute(url, "href")} class="hover:text-[#333638] transition-colors duration-300"> ${title} </a> </h3> ${description && renderTemplate`<p class="text-[#333638] text-sm leading-relaxed" style="font-family: 'Poppins', sans-serif;">${description}</p>`} </div> </div>`;
 }, "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/components/ui/ServiceCard.astro", void 0);
 
-const eventsData = [
-	{
-		title: "Bodas Campestres Tu San Agustín Zona E",
-		image: "/src/assets/images/bodascampestreszonae_tu_san_agustin_lugares_para_eventos_historias_006.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/bodas-campestres-tu-san-agustin-zonae"
-	},
-	{
-		title: "Fiesta de 15 Años Centro de Eventos Salón Vivaldi, Laureles",
-		image: "/src/assets/images/fiestade15anosvivaldi_tu_san_agustin_lugares_para_eventos_historias_007.webp",
-		url: "#"
-	},
-	{
-		title: "Boda Hacienda El Romeral",
-		image: "/src/assets/images/bodahaciendaelromeral_tu_san_agustin_lugares_para_eventos_historias_008.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/boda-hacienda-el-romeral"
-	},
-	{
-		title: "Boda Forest Campestre",
-		image: "/src/assets/images/bodaforestcampestre_tu_san_agustin_lugares_para_eventos_historias_009.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/boda-forest-campestre"
-	},
-	{
-		title: "Fiesta de 15 Años Gran Salon",
-		image: "/src/assets/images/image104_converted.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/fiesta-de-15-anos-gran-salon"
-	},
-	{
-		title: "Fiesta de 15 Años Villa Celeste",
-		image: "/src/assets/images/image105_converted.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/fiesta-de-15-anos-villa-celeste"
-	},
-	{
-		title: "Fiesta de 15 Años Montpellier",
-		image: "/src/assets/images/image107_converted.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/fiesta-de-15-anos-montpellier"
-	},
-	{
-		title: "Boda Igualitaria Jardín Botánico",
-		image: "/src/assets/images/image108_converted.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/boda-igualitaria-jardin-botanico"
-	},
-	{
-		title: "Boda Hacienda San Francisco",
-		image: "/src/assets/images/image109_converted.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/boda-hacienda-san-francisco"
-	},
-	{
-		title: "Bodas Campestres Tu San Agustín Zona E (Pág 2)",
-		image: "/src/assets/images/0J8A4840.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/bodas-campestres-tu-san-agustin-zonae-pagina-2"
-	},
-	{
-		title: "Fiesta de 15 Años Centro de Eventos Salón Vivaldi, Laureles (Pág 2)",
-		image: "/src/assets/images/MPYV8199.webp",
-		url: "https://www.tusanagustin.com/historias-de-eventos-reales/fiesta-de-15-anos-centro-de-eventos-salon-vivaldi-laureles-pagina-2"
-	}
+const img1 = new Proxy({"src":"/_astro/bodascampestreszonae_tu_san_agustin_lugares_para_eventos_historias_006.2M5XuE6V.webp","width":570,"height":391,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/bodascampestreszonae_tu_san_agustin_lugares_para_eventos_historias_006.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/bodascampestreszonae_tu_san_agustin_lugares_para_eventos_historias_006.webp");
+							return target[name];
+						}
+					});
+
+const img2 = new Proxy({"src":"/_astro/fiestade15anosvivaldi_tu_san_agustin_lugares_para_eventos_historias_007.B11k6KWE.webp","width":570,"height":391,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/fiestade15anosvivaldi_tu_san_agustin_lugares_para_eventos_historias_007.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/fiestade15anosvivaldi_tu_san_agustin_lugares_para_eventos_historias_007.webp");
+							return target[name];
+						}
+					});
+
+const img3 = new Proxy({"src":"/_astro/bodahaciendaelromeral_tu_san_agustin_lugares_para_eventos_historias_008.B8p0SK1l.webp","width":570,"height":391,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/bodahaciendaelromeral_tu_san_agustin_lugares_para_eventos_historias_008.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/bodahaciendaelromeral_tu_san_agustin_lugares_para_eventos_historias_008.webp");
+							return target[name];
+						}
+					});
+
+const img4 = new Proxy({"src":"/_astro/bodaforestcampestre_tu_san_agustin_lugares_para_eventos_historias_009.Cf9FS_KF.webp","width":570,"height":391,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/bodaforestcampestre_tu_san_agustin_lugares_para_eventos_historias_009.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/bodaforestcampestre_tu_san_agustin_lugares_para_eventos_historias_009.webp");
+							return target[name];
+						}
+					});
+
+const img5 = new Proxy({"src":"/_astro/image104_converted.DlH5EueN.webp","width":1379,"height":1080,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image104_converted.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image104_converted.webp");
+							return target[name];
+						}
+					});
+
+const img6 = new Proxy({"src":"/_astro/image105_converted.3bfbIdjH.webp","width":1379,"height":1080,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image105_converted.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image105_converted.webp");
+							return target[name];
+						}
+					});
+
+const img7 = new Proxy({"src":"/_astro/image107_converted.fzGVM7wn.webp","width":1379,"height":1080,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image107_converted.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image107_converted.webp");
+							return target[name];
+						}
+					});
+
+const img8 = new Proxy({"src":"/_astro/image108_converted.DvZyhzq3.webp","width":1379,"height":1080,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image108_converted.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image108_converted.webp");
+							return target[name];
+						}
+					});
+
+const img9 = new Proxy({"src":"/_astro/image109_converted.IOmlyBnU.webp","width":1379,"height":1080,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image109_converted.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/image109_converted.webp");
+							return target[name];
+						}
+					});
+
+const img10 = new Proxy({"src":"/_astro/0J8A4840.CFhMaFbV.webp","width":4480,"height":6720,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/0J8A4840.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/0J8A4840.webp");
+							return target[name];
+						}
+					});
+
+const img11 = new Proxy({"src":"/_astro/MPYV8199.Bgw0o3JM.webp","width":4176,"height":2784,"format":"webp"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/MPYV8199.webp";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/assets/images/MPYV8199.webp");
+							return target[name];
+						}
+					});
+
+const events = [
+    {
+        title: "Bodas Campestres Tu San Agustín Zona E",
+        image: img1,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/bodas-campestres-tu-san-agustin-zonae"
+    },
+    {
+        title: "Fiesta de 15 Años Centro de Eventos Salón Vivaldi, Laureles",
+        image: img2,
+        url: "#"
+    },
+    {
+        title: "Boda Hacienda El Romeral",
+        image: img3,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/boda-hacienda-el-romeral"
+    },
+    {
+        title: "Boda Forest Campestre",
+        image: img4,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/boda-forest-campestre"
+    },
+    {
+        title: "Fiesta de 15 Años Gran Salon",
+        image: img5,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/fiesta-de-15-anos-gran-salon"
+    },
+    {
+        title: "Fiesta de 15 Años Villa Celeste",
+        image: img6,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/fiesta-de-15-anos-villa-celeste"
+    },
+    {
+        title: "Fiesta de 15 Años Montpellier",
+        image: img7,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/fiesta-de-15-anos-montpellier"
+    },
+    {
+        title: "Boda Igualitaria Jardín Botánico",
+        image: img8,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/boda-igualitaria-jardin-botanico"
+    },
+    {
+        title: "Boda Hacienda San Francisco",
+        image: img9,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/boda-hacienda-san-francisco"
+    },
+    {
+        title: "Bodas Campestres Tu San Agustín Zona E (Pág 2)",
+        image: img10,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/bodas-campestres-tu-san-agustin-zonae-pagina-2"
+    },
+    {
+        title: "Fiesta de 15 Años Centro de Eventos Salón Vivaldi, Laureles (Pág 2)",
+        image: img11,
+        url: "https://www.tusanagustin.com/historias-de-eventos-reales/fiesta-de-15-anos-centro-de-eventos-salon-vivaldi-laureles-pagina-2"
+    }
 ];
 
 const $$Astro$1 = createAstro("https://www.tusanagustin.com");
 const $$EventsPagination = createComponent(($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
   Astro2.self = $$EventsPagination;
-  return renderTemplate`${maybeRenderHead()}<section class="bg-[#FDF5E9] py-16 px-4 font-poppins" id="events-section" data-astro-cid-bear462z> <div class="max-w-7xl mx-auto" data-astro-cid-bear462z> <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16" data-astro-cid-bear462z> ${eventsData.map((event, index) => renderTemplate`<div class="event-card-wrapper hidden flex-col items-center group"${addAttribute(index, "data-index")} data-astro-cid-bear462z> <h3 class="text-[#4EAC9F] text-lg font-bold text-center mb-6 h-12 flex items-center justify-center max-w-[250px]" style="font-family: 'Poppins', sans-serif;" data-astro-cid-bear462z> <a${addAttribute(event.url, "href")} class="hover:text-[#333638] transition-colors duration-300 block w-full" data-astro-cid-bear462z> ${event.title} </a> </h3> <div class="w-full" data-astro-cid-bear462z> ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": event.title, "image": event.image, "url": event.url, "data-astro-cid-bear462z": true })} </div> <style is:global>
+  return renderTemplate`${maybeRenderHead()}<section class="bg-[#FDF5E9] py-16 px-4 font-poppins" id="events-section" data-astro-cid-bear462z> <div class="max-w-7xl mx-auto" data-astro-cid-bear462z> <div id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16" data-astro-cid-bear462z> ${events.map((event, index) => renderTemplate`<div class="event-card-wrapper hidden flex-col items-center group"${addAttribute(index, "data-index")} data-astro-cid-bear462z> <h3 class="text-[#4EAC9F] text-lg font-bold text-center mb-6 h-12 flex items-center justify-center max-w-[250px]" style="font-family: 'Poppins', sans-serif;" data-astro-cid-bear462z> <a${addAttribute(event.url, "href")} class="hover:text-[#333638] transition-colors duration-300 block w-full" data-astro-cid-bear462z> ${event.title} </a> </h3> <div class="w-full" data-astro-cid-bear462z> ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": event.title, "image": event.image, "url": event.url, "data-astro-cid-bear462z": true })} </div> <style is:global>
                         /* Hide the description and title inside ServiceCard since we have our own */
                         .event-card-wrapper h3 + div .px-4 {
                             display: none;
@@ -1863,7 +2008,7 @@ const imgMedellin = new Proxy({"src":"/_astro/6CED1B6E-E6A6-42B3-982B-814ED01A55
 					});
 
 const $$Locaciones = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<div class="bg-[#FDF5E9 ] py-8 md:py-16" data-astro-cid-ffgfcf5z> <div class="max-w-7xl mx-auto px-4 md:px-16" data-astro-cid-ffgfcf5z> <h2 class="text-4xl md:text-7xl text-center mb-12" data-astro-cid-ffgfcf5z> <span class="text-[#4EAC9F]" data-astro-cid-ffgfcf5z>Locaciones</span> <span class="text-[#2D3748]" data-astro-cid-ffgfcf5z>Para Tus Eventos</span> </h2> <div class="relative w-full group" data-astro-cid-ffgfcf5z> <button class="swiper-prev-locaciones-fixed absolute left-0 md:-left-14 top-[40%] -translate-y-1/2 z-50 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center hover:bg-gray-50 transition-all border border-gray-100 text-gray-800 cursor-pointer" data-astro-cid-ffgfcf5z> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-ffgfcf5z><path d="m15 18-6-6 6-6" data-astro-cid-ffgfcf5z></path></svg> </button> <button class="swiper-next-locaciones-fixed absolute right-0 md:-right-14 top-[40%] -translate-y-1/2 z-50 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center hover:bg-gray-50 transition-all border border-gray-100 text-gray-800 cursor-pointer" data-astro-cid-ffgfcf5z> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-ffgfcf5z><path d="m9 18 6-6-6-6" data-astro-cid-ffgfcf5z></path></svg> </button> <div class="swiper swiperLocacionesFixed !p-6" data-astro-cid-ffgfcf5z> <div class="swiper-wrapper" data-astro-cid-ffgfcf5z> ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Rionegro", "image": imgRionegro, "url": "https://www.tusanagustin.com/lugares/rionegro", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Envigado", "image": imgEnvigado, "url": "https://www.tusanagustin.com/lugares/envigado", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Medell\xEDn", "image": imgMedellin, "url": "https://www.tusanagustin.com/lugares/medellin", "data-astro-cid-ffgfcf5z": true })}  ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Rionegro", "description": "", "image": imgRionegro, "url": "https://www.tusanagustin.com/lugares/rionegro", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Envigado", "description": "", "image": imgEnvigado, "url": "https://www.tusanagustin.com/lugares/envigado", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Medell\xEDn", "description": "", "image": imgMedellin, "url": "https://www.tusanagustin.com/lugares/medellin", "data-astro-cid-ffgfcf5z": true })}  ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Rionegro", "description": "", "image": imgRionegro, "url": "https://www.tusanagustin.com/lugares/rionegro", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Envigado", "description": "", "image": imgEnvigado, "url": "https://www.tusanagustin.com/lugares/envigado", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "title": "Medell\xEDn", "description": "", "image": imgMedellin, "url": "https://www.tusanagustin.com/lugares/medellin", "data-astro-cid-ffgfcf5z": true })} </div> </div> </div> <div class="flex justify-center mt-8 mb-12" data-astro-cid-ffgfcf5z> <a href="https://wa.me/573168753305?text=Hola!" class="bg-[#333638] text-white px-10 py-3 rounded-full hover:bg-opacity-90 transition-all font-medium" data-astro-cid-ffgfcf5z>
+  return renderTemplate`${maybeRenderHead()}<div class="bg-[#333638] py-8 md:py-16" data-astro-cid-ffgfcf5z> <div class="max-w-7xl mx-auto px-4 md:px-16" data-astro-cid-ffgfcf5z> <h2 class="text-3xl md:text-5xl text-center mb-12 font-alice font-bold leading-tight" style="font-family: 'Alice', serif;" data-astro-cid-ffgfcf5z> <span class="text-[#4EAC9F]" data-astro-cid-ffgfcf5z>Locaciones de ensueño</span> <br data-astro-cid-ffgfcf5z> <span class="text-white" data-astro-cid-ffgfcf5z>Para tus eventos</span> </h2> <div class="relative w-full group" data-astro-cid-ffgfcf5z> <button class="swiper-prev-locaciones-fixed absolute left-0 md:-left-14 top-[40%] -translate-y-1/2 z-50 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center hover:bg-gray-50 transition-all border border-gray-100 text-gray-800 cursor-pointer" data-astro-cid-ffgfcf5z> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-ffgfcf5z><path d="m15 18-6-6 6-6" data-astro-cid-ffgfcf5z></path></svg> </button> <button class="swiper-next-locaciones-fixed absolute right-0 md:-right-14 top-[40%] -translate-y-1/2 z-50 w-12 h-12 bg-white rounded-full shadow-xl flex items-center justify-center hover:bg-gray-50 transition-all border border-gray-100 text-gray-800 cursor-pointer" data-astro-cid-ffgfcf5z> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-astro-cid-ffgfcf5z><path d="m9 18 6-6-6-6" data-astro-cid-ffgfcf5z></path></svg> </button> <div class="swiper swiperLocacionesFixed !p-6" data-astro-cid-ffgfcf5z> <div class="swiper-wrapper" data-astro-cid-ffgfcf5z> ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Rionegro", "image": imgRionegro, "url": "https://www.tusanagustin.com/lugares/rionegro", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Envigado", "image": imgEnvigado, "url": "https://www.tusanagustin.com/lugares/envigado", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Medell\xEDn", "image": imgMedellin, "url": "https://www.tusanagustin.com/lugares/medellin", "data-astro-cid-ffgfcf5z": true })}  ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Rionegro", "description": "", "image": imgRionegro, "url": "https://www.tusanagustin.com/lugares/rionegro", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Envigado", "description": "", "image": imgEnvigado, "url": "https://www.tusanagustin.com/lugares/envigado", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Medell\xEDn", "description": "", "image": imgMedellin, "url": "https://www.tusanagustin.com/lugares/medellin", "data-astro-cid-ffgfcf5z": true })}  ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Rionegro", "description": "", "image": imgRionegro, "url": "https://www.tusanagustin.com/lugares/rionegro", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Envigado", "description": "", "image": imgEnvigado, "url": "https://www.tusanagustin.com/lugares/envigado", "data-astro-cid-ffgfcf5z": true })} ${renderComponent($$result, "ServiceCard", $$ServiceCard, { "borderColor": "#333638", "largeArrow": true, "title": "Medell\xEDn", "description": "", "image": imgMedellin, "url": "https://www.tusanagustin.com/lugares/medellin", "data-astro-cid-ffgfcf5z": true })} </div> </div> </div> <div class="flex justify-center mt-8 mb-12" data-astro-cid-ffgfcf5z> <a href="https://wa.me/573168753305?text=Hola!" class="bg-[#FDF5E9] text-[#333638] px-10 py-3 rounded-full hover:bg-opacity-90 transition-all font-medium font-poppins shadow-lg hover:scale-105 transform duration-300" data-astro-cid-ffgfcf5z>
 Quiero Reservar
 </a> </div> </div> </div>  ${renderScript($$result, "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/components/Locaciones.astro?astro&type=script&index=0&lang.ts")}`;
 }, "C:/Users/KEVIN/Desktop/nuevas internas/historiasparaeventos/src/components/Locaciones.astro", void 0);
